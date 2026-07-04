@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorant Sula</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Restorant Sula</div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link">Kryefaqja</a></li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#about" class="nav-link">Rreth Nesh</a></li>
+            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Shijoni shijen e vërtetë</h1>
+            <p>Shije autentike shqiptare,të përgatitura me përbërës të freskët dhe traditë.</p>
+            <a href="#menu" class="cta-button">Shiko menunë</a>
+        </div>
+    </section>
+    <title>Restorant Sula</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- Menu Categories Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Menu</h2>
+            
+            <!-- Kategori kryesore -->
+            <div class="main-categories" id="mainCategories">
+                <div class="main-category-card" data-category="pije">
+                    <div class="category-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h3>Pije</h3>
+                    <p>Kafe, Freskuese, Alkolike, Birra</p>
+                </div>
+                
+                <div class="main-category-card" data-category="ushqim">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Ushqim</h3>
+                    <p>Mezoret, Mishra</p>
+                </div>
+            </div>
+            
+            <!-- Sub-kategori (do të shfaqet kur klikohet "Pije") -->
+            <div class="sub-categories-container" id="subCategoriesContainer" style="display: none;">
+                <div class="sub-categories-header">
+                    <button class="back-to-main" id="backToMain">
+                        <i class="fas fa-arrow-left"></i> Kthehu te kategoritë
+                    </button>
+                    <h3 class="sub-category-title" id="subCategoryTitle"></h3>
+                </div>
+                
+                <div class="sub-categories-grid" id="subCategoriesGrid">
+                    <!-- Sub-kategoritë do të shfaqen këtu -->
+                </div>
+            </div>
+            
+            <!-- Produktet (do të shfaqen kur klikohet një sub-kategori) -->
+            <div class="products-container" id="productsContainer" style="display: none;">
+                <div class="products-header">
+                    <button class="back-to-sub" id="backToSub">
+                        <i class="fas fa-arrow-left"></i> Kthehu
+                    </button>
+                    <h3 class="products-title" id="productsTitle"></h3>
+                </div>
+                
+              
+                <div class="products-grid" id="productsGrid">
+                              <!-- Produktet do të shfaqen këtu verticalisht -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal për detajet e produktit -->
+<div class="modal-overlay" id="modalOverlay">
+    <button class="close-modal" id="closeModal">&times;</button>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="" class="modal-image">
+            </div>
+            <p id="modalDescription" class="modal-description"></p>
+            <div class="modal-price-container">
+                <div class="modal-price" id="modalPrice"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Rreth Nesh</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Historia Jonë</h3>
+                    <p>Restorant Sula është krijuar me pasion për kuzhinën tradicionale shqiptare. Në fillim ishim një vaktë e vogël familjare, por me kalimin e kohës u bëmë një restorant me shumë vlera.</p>
+                    <p>Përdorim përbërës të freskët lokale dhe receta të vjetra familjare për të krijuar një përvojë unike kulinarie. Kuzhinieri ynë kryesor ka më shumë se 20 vjet përvojë në gatimin tradicional.</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/lokalo.jpeg" alt="Restoranti">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresa</h3>
+                            <p>Mollas,Elbasan</p>
+                            
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+355 68 221 8275</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>restorantsula@gmail.com</p>
+                            
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Orari</h3>
+                            <p>E Hënë - E Diel: 09:00 - 23:00</p>
+                           
+                        </div>
+                    </div>
+                </div>
+               <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.658906286556!2d20.0016744!3d40.9348928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350727f17b3e445%3A0xfbe1fbf0ae64abdc!2sW2M2%2BXM9%2C%20C%C3%ABrrik!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    class="map-iframe"
+                    title="Vendndodhja e restorantit">
+                </iframe>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalIngredients" class="modal-ingredients"></p>
+                    <div class="modal-price-container">
+                        <span class="modal-price" id="modalPrice"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restorant Sula</h3>
+                    <p>Kuzhinë tradicionale shqiptare me shije autentike.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/restorant_sula" target="_blank">
+                        <i class="fab fa-instagram"></i></a>
+</div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link të shpejtë</h3>
+                    <ul>
+                        <li><a href="#home">Kryefaqja</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">Rreth Nesh</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+               
+            <div class="footer-bottom">
+    <p>&copy; 2026 Restorant Sula. Të gjitha të drejtat e rezervuara.</p>
+    <p class="developer">
+        Website designed & developed by <strong>A.Sula</strong>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    // Blur navbar kur scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+</html>
